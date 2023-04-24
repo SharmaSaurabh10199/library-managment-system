@@ -1,3 +1,4 @@
+
 package com.sharma.libmanagmentsystem.services;
 
 import java.util.List;
@@ -17,7 +18,10 @@ public class UserService {
     }
 
     public void addUser(User user) {
-        userRepo.save(user);
+        User userFromDb = userRepo.findUser(user.getName());
+        if (userFromDb == null) {
+            userRepo.save(user);
+        }
 
     }
 

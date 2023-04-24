@@ -11,7 +11,7 @@ import com.sharma.libmanagmentsystem.model.User;
 
 public interface TransactionRepo extends JpaRepository<Transaction, Integer> {
 
-    List<Transaction> findByBookAndStudentAndTransactionTypeOrderByIdDesc(Book book,
+    List<Transaction> findByBookAndUserAndTransactionTypeOrderByIdDesc(Book book,
             User user, TransactionType issue);
 
 }

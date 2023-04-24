@@ -106,7 +106,7 @@ public class TransactionService {
             throw new Exception(" Book or student is either not present, or book is not assignet to this student");
         }
 
-        List<Transaction> issueTxnList = transactionRepo.findByBookAndStudentAndTransactionTypeOrderByIdDesc(book,
+        List<Transaction> issueTxnList = transactionRepo.findByBookAndUserAndTransactionTypeOrderByIdDesc(book,
                 user,
                 TransactionType.ISSUE);
 

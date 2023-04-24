@@ -25,6 +25,8 @@ public class BookService {
 
         // setting the book is neccessary prior to saving the book
         book.setAuthor(author);
+        System.out.println("adding the book, hold on");
+        System.out.println(book);
 
         bookRepo.save(book);
         return null;
